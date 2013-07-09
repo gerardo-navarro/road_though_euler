@@ -1,4 +1,3 @@
- 
 require "./solution_algorithm"
 require "test/unit"
  

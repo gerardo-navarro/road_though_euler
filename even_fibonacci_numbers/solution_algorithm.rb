@@ -1,0 +1,29 @@
+class SolutionAlgorithm
+
+  # 1st implementation
+  def SolutionAlgorithm.even_fibonacci_numbers_for(number)
+
+    f_previous_previous = 1
+    f_previous = 0
+    f_current = f_previous_previous + f_previous
+
+    sum = 0
+    while f_current < number
+      
+      sum += f_current if f_current % 2 == 0
+
+      f_previous_previous = f_previous
+      f_previous = f_current
+      f_current = f_previous_previous + f_previous
+
+    end
+
+    puts
+    puts sum
+    sum
+
+  end
+
+  
+ 
+end
