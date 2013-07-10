@@ -13,5 +13,9 @@ class ProblemTestCase < Test::Unit::TestCase
   def test_problem
     assert_equal(4613732, SolutionAlgorithm.even_fibonacci_numbers_for(4000000))
   end
+  
+  def test_heard
+    assert(4613732 < SolutionAlgorithm.even_fibonacci_numbers_for(4000000000))
+  end
  
 end
