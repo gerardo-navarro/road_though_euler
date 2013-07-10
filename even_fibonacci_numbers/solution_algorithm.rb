@@ -27,6 +27,7 @@ class SolutionAlgorithm
   # end
 
   # # 2nd implementation - O(n)
+  # Phi is the Golden Ratio of the fibonacci numbers. The Golden Ratio is the average ratio between a fibonacci number and its predecessor. It is approximately 1.618... As we know that the fibonacci series produces an even number every three times, we have to calculate phi to the power of 3 to get the average distance between two even, consecutive numbers in the the fibonacci series. As it is not 100% precise, we have to round every time we apply phi
   # def SolutionAlgorithm.even_fibonacci_numbers_for(number)
 
   #   phi = (1 + Math.sqrt(5)) / 2
@@ -46,6 +47,8 @@ class SolutionAlgorithm
   # end
 
   # 3rd implementation - O(n)
+  # It is easy to prove that every third Fibonacci number is even.
+  # F(n) = F(n-1) + F(n-2) = F(n-2) + F(n-3) + F(n-2) = 2*F(n-2) + F(n-3) = 2*(F(n-3) + F(n-4)) + F(n-3)) = 3*F(n-3) + 2*F(n-4) = 3*F(n-3) + F(n-4) + F(n-5) + F(n-6) = 4*F(n-3) + F(n-6)
   def SolutionAlgorithm.even_fibonacci_numbers_for(number)
 
     f_previous_previous = 0
