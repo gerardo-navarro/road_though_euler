@@ -26,9 +26,5 @@ class ProblemTestCase < Test::Unit::TestCase
   def test_3099044504245996706400
     assert_equal(3099044504245996706400, SolutionAlgorithm.smallest_multiple_for_numbers_until(50))
   end
-
-  def test_3099044504245996706400
-    assert_equal(3099044504245996706400, SolutionAlgorithm.smallest_multiple_for_numbers_until(5000))
-  end
   
 end
