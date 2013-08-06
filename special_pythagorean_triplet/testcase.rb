@@ -10,6 +10,10 @@ class ProblemTestCase < Test::Unit::TestCase
   def test_60
     assert_equal(60, SolutionAlgorithm.special_pythagorean_triplet_for(12))
   end
+  
+  def test_780
+    assert_equal(780, SolutionAlgorithm.special_pythagorean_triplet_for(30))
+  end
 
   def test_31875000
     assert_equal(31875000, SolutionAlgorithm.special_pythagorean_triplet_for(1000))
