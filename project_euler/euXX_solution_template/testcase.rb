@@ -1,7 +1,7 @@
 require "./solution_algorithm"
-require "test/unit"
+require "minitest/autorun"
  
-class ProblemTestCase < Test::Unit::TestCase
+class ProblemTestCase < MiniTest::Test
 
   def test_easy
     assert_equal(23, SolutionAlgorithm.solve(XXXXXXXX))
