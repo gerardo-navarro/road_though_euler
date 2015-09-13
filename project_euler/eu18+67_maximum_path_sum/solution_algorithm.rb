@@ -41,24 +41,22 @@ class SolutionAlgorithm
   #   return max_path_memoization_arr[current_position]
   # end
 
+  # 2nd implementation with a bottom up approach - O(n^2) in time; O(1) in memory
   def SolutionAlgorithm.solve(triangle_arr)
 
     level_count = (Math.sqrt(2.0 * triangle_arr.size + 0.25) - 0.5).to_i
     level_end_i = triangle_arr.size - level_count
 
-    (triangle_arr.size - level_count - 1).downto(0) do |i|
+    (level_end_i - 1).downto(0) do |i|
 
       if i < level_end_i
         level_count -= 1
         level_end_i -= level_count
       end
-      # require "pry"; binding.pry
-
 
       max_i = i + (level_count+1)
       max_i -= 1 if triangle_arr[max_i-1] > triangle_arr[max_i]
       triangle_arr[i] = triangle_arr[i] + triangle_arr[max_i]
-      # puts "#{triangle_arr.to_s}"
 
     end
     return triangle_arr[0]
